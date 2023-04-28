@@ -1,0 +1,95 @@
+#Skeleton with html and css 
+
+-----------------HTML-----------------
+<html>
+<body>
+<div class="box"></div><br>
+<div class="box1"></div><br>
+<div class="line"></div>
+</body
+</html>
+---------------------CSS-------------------
+<style>
+$shine-width: 25px;
+$box-width: 50px;
+
+.box {
+  width: $box-width;
+  height: $box-width;
+  border-radius: 50%;
+  overflow: hidden;
+  
+  &:empty {
+    position: relative;
+    background: #eee;
+    
+    &:before {
+      content:'';
+      transform: skewX(-45deg);
+      background-image: linear-gradient(90deg, #eee 0px, rgba(255,255,255,.4) $shine-width/2, #eee $shine-width);
+      position: absolute;
+      background-repeat: repeat-x;
+      left: -($box-width/2 + $shine-width); 
+      width: $shine-width;
+      height: 100%;
+      animation: shine 1s infinite;
+    }
+  }
+}
+.box1 {
+  width: $box-width;
+  height: $box-width;
+  overflow: hidden;
+  
+  &:empty {
+    position: relative;
+    background: #eee;
+    
+    &:before {
+      content:'';
+      transform: skewX(-45deg);
+      background-image: linear-gradient(90deg, #eee 0px, rgba(255,255,255,.4) $shine-width/2, #eee $shine-width);
+      position: absolute;
+      background-repeat: repeat-x;
+      left: -($box-width/2 + $shine-width); 
+      width: $shine-width;
+      height: 100%;
+      animation: shine 1s infinite;
+    }
+  }
+}
+.line {
+  width: 100px;
+  height: 10px;
+  overflow: hidden;
+   border-radius: 5px;
+  
+  &:empty {
+    position: relative;
+    background: #eee;
+    
+    &:before {
+      content:'';
+      transform: skewX(-45deg);
+      background-image: linear-gradient(90deg, #eee 0px, rgba(255,255,255,.4) $shine-width/2, #eee $shine-width);
+      position: absolute;
+      background-repeat: repeat-x;
+      left: -($box-width/2 + $shine-width); 
+      width: $shine-width;
+      height: 100%;
+      animation: shine 1s infinite;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -($box-width/2 + $shine-width);
+  }
+  100% {
+    left: 3/2 * $box-width;
+  }
+}
+</style
+
+
